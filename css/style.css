@@ -1,6 +1,7 @@
 body{
     padding : 40px;
     font-family: 'Mali', cursive;
+    background-color: #FEF2F6;
 }
 
 .wedding-info{
@@ -10,10 +11,6 @@ body{
 .separator{
     border: 2px dashed #3cb29e;
     margin: 15px 0;
-}
-
-.wedding-info .separator{
-    margin: 15px 35%;
 }
 
 .wedding-info .label1{
@@ -70,4 +67,54 @@ body{
 .save-the-date .txt4{
     font-size: 18px;
     color: #D83172;
+}
+
+#options .heading{
+    text-align: center;
+    font-weight: 600;
+}
+
+#options .events{
+    width: 100%;
+    height: 160px;
+    border-radius: 50%;
+    color: #ffffff;
+    font-size: 28px;
+    font-weight: 600;
+    background: #3cb29e;
+    text-align: center;
+    line-height: 5.5;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#options .events:hover{
+    transform: scale(1.2);
+}
+
+#options .guestbook-label{
+    text-align:center;
+    text-transform: uppercase;
+    padding: 20px 0;
+}
+
+#options .guestbook-label label{
+    font-size: 14px;
+    letter-spacing: 4;
+}
+
+#options .guestbook-label div{
+    text-align: center;
+    border: 5px solid gray;
+    padding: 15px;
+    letter-spacing: 4;
+    color: #3cb29e;
+    font-weight: 900;
+    font-size: 20px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#options .guestbook-label div:hover{
+    transform: scale(1.1);
 }
