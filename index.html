@@ -51,13 +51,15 @@ Header
         </div>
     </header>
     <main id="main">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class='separator'></div>
+                </div>
+            </div>
+        </div>
         <section id="cover">
             <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <div class='separator'></div>
-                    </div>
-                </div>
                 <div class="row">
                     <div class="col-2">
                         <div class="save-the-date">
@@ -72,9 +74,10 @@ Header
                     </div>
                     <div class="col-3">
                         <div class="welcome-message">
-                                <label>Welcome to our</label>
-                                <h3>Wedding Page</h3>
-                                <p>Hey everyone, thank you for taking the time to check out our website! We are more than excited to see all of you at our wedding.</p>
+                            <label>Welcome to our</label>
+                            <h3>Wedding Page</h3>
+                            <p>Hey everyone, thank you for taking the time to check out our website! We are more than excited
+                                to see all of you at our wedding.</p>
                         </div>
                     </div>
                 </div>
@@ -125,38 +128,41 @@ Header
                 </div>
                 <div class="row">
                     <div class="col">
-                        <h3>List of Events</h3>
+                        <h3>List of Events : </h3>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-6">
-                        <div class="ceremony-wrapper">
+
+
+                    <div class="col-3">
+                        <div class="ceremony-wrapper blue">
                             <h4>Engagement Ceremony</h4>
                             <span>3:30 pm to 4:30 pm</span>
+                            <div>8th November '18</div>
                         </div>
                     </div>
-                    <div class="col-6">
-                        <div class="ceremony-wrapper">
+                    <div class="col-3">
+                        <div class="ceremony-wrapper purple">
                             <h4>Ladies Sangeet</h4>
-                            <span>5:00 pm  to 7:00 pm</span>
+                            <span>5:00 pm to 7:00 pm</span>
+                            <div>8th November '18</div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="ceremony-wrapper red">
+                            <h4>&ensp; Wedding Ceremony</h4>
+                            <span>9:00 am to 11:00 am</span>
+                            <div>9th November '18</div>
+                        </div>
+                    </div>
+                    <div class="col-3">
+                        <div class="ceremony-wrapper pink">
+                            <h4>Blessings ceremony and dinner</h4>
+                            <span>7:30 pm onwards</span>
+                            <div>9th November '18</div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="row">
-                        <div class="col-6">
-                            <div class="ceremony-wrapper">
-                                <h4>Wedding Ceremony</h4>
-                                <span>9:00 am to 11:00 am</span>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="ceremony-wrapper">
-                                <h4>Blessings ceremony and dinner</h4>
-                                <span>7:30 pm onwards</span>
-                            </div>
-                        </div>
-                    </div>
             </div>
         </section>
         <section id="guestForm">
@@ -182,7 +188,10 @@ Header
                 </div>
                 <div class="row">
                     <div class="col">
-                        Venue
+                        <h3>Venue</h3>
+                        <div id="map">
+
+                        </div>
                     </div>
                 </div>
             </div>
@@ -202,4 +211,17 @@ Footer
         crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
     <script src="./js/main.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBwOK6PfdqNpVd1sksnv4WyuvlBenTMRRs&callback=initMap">
+    </script>
+    <script>
+        function initMap() {
+            // The location of Uluru
+            var divyaSaiGardenDewas = { lat: 22.952770, lng: 76.041437 };
+            // The map, centered at Uluru
+            var map = new google.maps.Map(
+                document.getElementById('map'), { zoom: 15, center: divyaSaiGardenDewas });
+            // The marker, positioned at Uluru
+            var marker = new google.maps.Marker({ position: divyaSaiGardenDewas, map: map });
+        }
+    </script>
 </body>
